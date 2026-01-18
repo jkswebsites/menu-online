@@ -6,7 +6,7 @@ import NavbarSheet from './navbar-sheet';
 
 const HeaderMain = () => {
   return (
-    <header className="bg-background fixed flex h-16 w-full flex-row-reverse items-center justify-between px-3 lg:flex-row lg:justify-start">
+    <header className="fixed z-50 flex h-16 w-full flex-row-reverse items-center justify-between bg-linear-to-b from-neutral-900 from-80% to-transparent px-3 lg:flex-row lg:justify-start">
       <div className="mx-9">
         <LogoMain />
       </div>
