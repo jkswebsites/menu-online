@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/sheet';
 import { IoMenu } from 'react-icons/io5';
 import NavbarMain from './navbar-main';
-import { linksNav } from '../constants/nav-links';
+import { linksNav } from '../_constants/nav-links';
 
 const NavbarSheet = () => {
   return (

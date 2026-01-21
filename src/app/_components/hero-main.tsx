@@ -1,17 +1,32 @@
+'use client';
 import Image from 'next/image';
-import imgPizza from '@/app/assets/images/pizza/pizza-forno.png';
 import { TbBeach } from 'react-icons/tb';
+import { useEffect, useState } from 'react';
+import { ISlideImage } from '../_interfaces/slide-image';
 
-const HeroMain = () => {
+interface HeroMainProps {
+  slideImages: ISlideImage[];
+}
+const HeroMain = ({ slideImages }: HeroMainProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === slideImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="relative h-[80vh] w-full">
       <div className="relative z-0 h-4/5 overflow-hidden lg:h-100">
         <Image
-          src={imgPizza}
+          src={slideImages[currentIndex].img}
           width={0}
           height={0}
-          alt="pizza no forno a lenha"
-          className="relative z-0 mx-auto h-full w-full object-cover"
+          alt={slideImages[currentIndex].description}
+          className="relative z-0 mx-auto h-full w-full animate-pulse object-cover"
         />
         <div className="absolute bottom-0 h-full w-full bg-linear-to-t from-neutral-900 to-transparent"></div>
       </div>
