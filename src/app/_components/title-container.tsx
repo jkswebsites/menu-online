@@ -11,10 +11,10 @@ const TitleContainer = ({
 }: TitleContainerProps) => {
   return (
     <div>
-      <h3 className="font-oxygen text-lg font-bold tracking-wide text-yellow-400 sm:text-3xl">
+      <h3 className="font-poppins text-3xl font-bold tracking-wide text-yellow-400 sm:text-3xl">
         {subtile}
       </h3>
-      <p className="font-roboto text-neutral-300">
+      <p className="font-roboto -mt-2 text-neutral-300">
         <strong className="text-lg font-bold tracking-widest text-yellow-400 sm:text-2xl">
           {distak}
         </strong>{' '}

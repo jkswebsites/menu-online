@@ -31,7 +31,7 @@ const HeroMain = ({ slideImages }: HeroMainProps) => {
         <div className="absolute bottom-0 h-full w-full bg-linear-to-t from-neutral-900 to-transparent"></div>
       </div>
 
-      <div className="relative bottom-30 z-50 flex flex-col items-center justify-center">
+      <div className="relative bottom-30 z-40 flex flex-col items-center justify-center">
         <TbBeach className="text-center text-9xl" />
         <div>
           <h2 className="font-roboto text-center text-4xl font-bold">

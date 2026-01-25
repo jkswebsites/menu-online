@@ -1,15 +1,13 @@
 'use client';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { ILink } from '../_interfaces/links';
+import { useActiveLink } from '@/hooks/useIsActive';
 
 interface NavbarMainProps {
   links: ILink[];
 }
 const NavbarMain = ({ links }: NavbarMainProps) => {
-  const pathname = usePathname();
-  console.log(pathname);
-  const isActive = (path: string) => path === pathname;
+  const { isActive } = useActiveLink();
   return (
     <nav className="flex flex-col gap-y-2.5 pl-5 lg:flex-row lg:gap-7">
       {links.map((link, index) => (

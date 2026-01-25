@@ -6,4 +6,5 @@ export interface IProduct {
   price: number;
   image: StaticImageData;
   discountPercent: number;
+  type: string;
 }
