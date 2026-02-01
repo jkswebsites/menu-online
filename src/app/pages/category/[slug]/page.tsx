@@ -23,11 +23,11 @@ const CategoryPage = async ({ params }: CategoryPageProps) => {
           distak=""
         />
 
-        <div className="scrollbar-hidden mt-2 flex h-125 flex-col gap-y-2 overflow-y-auto">
+        <div className="scrollbar-hidden mt-2 flex h-125 flex-col gap-y-2 overflow-y-auto pb-5 sm:ml-9 lg:w-155 lg:overflow-visible">
           {foods.map((food, index) => {
             return (
-              <Link key={index} href={food.title}>
-                <div className="flex h-37.5 w-full items-center gap-3 space-y-2 rounded-3xl border-b border-neutral-400 bg-black px-1">
+              <Link key={index} href={`/pages/details/${food.slug}`}>
+                <div className="flex h-37.5 w-full items-center gap-3 space-y-2 rounded-3xl border-b border-neutral-400 bg-black px-1 hover:scale-110">
                   <div className="h-4/5 w-4/12 overflow-hidden rounded-2xl">
                     <Image
                       src={food.image}

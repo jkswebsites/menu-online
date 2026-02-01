@@ -3,7 +3,7 @@ import imgPizza from '@/app/_assets/images/pizza/no-bg-pizza.png';
 
 const LoadingPage = () => {
   return (
-    <div className="flex h-screen w-full items-center justify-center">
+    <div className="flex h-screen w-full flex-col items-center justify-center">
       <Image
         src={imgPizza}
         alt="Pizza"

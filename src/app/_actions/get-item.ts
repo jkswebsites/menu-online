@@ -3,9 +3,9 @@ import { pizzas } from '@/app/_database/pizzas';
 import { IProduct } from '@/app/_interfaces/product';
 import { sodas } from '../_database/sodas';
 
-export const getByCategory = (categoryName: string): IProduct[] => {
-  const foods = [...pizzas, ...hamburguers, ...sodas].filter(
-    (food) => food.type === categoryName
+export const getItem = (urlSlug: string): IProduct | undefined => {
+  const foods = [...pizzas, ...hamburguers, ...sodas].find(
+    (food) => food.slug === urlSlug
   );
 
   return foods;

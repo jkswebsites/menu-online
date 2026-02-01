@@ -9,9 +9,13 @@ import BannerVertical from './_components/banner';
 import { hamburguers } from './_database/hamburguer';
 import img from '@/app/_assets/images/soda/coca-cola-2l.png';
 import Footer from './_components/footer';
-import SVGIcon from './_components/svg-icon';
+import ButtonWhats from './_components/buttons-whats';
 
 export default function Home() {
+  const messageWhats = `
+        Olá, vim pelo Cardápio Digital!
+        Gostaria de mais informações...
+    `;
   const pizzasDiscount = pizzas
     .slice(0, 5)
     .filter((item) => item.discountPercent > 0);
@@ -39,7 +43,11 @@ export default function Home() {
         </div>
 
         <div>
-          <BannerVertical path="/" src={img} title="Vai um Refri ai?" />
+          <BannerVertical
+            path="/pages/category/refrigerante"
+            src={img}
+            title="Vai um Refri ai?"
+          />
         </div>
         <div className="mt-5">
           <TitleContainer
@@ -52,7 +60,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <SVGIcon />
+      <ButtonWhats phone="5511941515753" message={messageWhats} />
       <Footer />
     </div>
   );

@@ -1,17 +1,15 @@
 'use client';
 import WhatsLogo from '@/app/_assets/svgs/whatsapp-svgrepo-com.svg';
 import Image from 'next/image';
+import { sendMessage } from '../helpers/message-what';
 
-const SVGIcon = () => {
+export interface ButtonWhatsProps {
+  phone: string;
+  message: string;
+}
+const ButtonWhats = ({ phone, message }: ButtonWhatsProps) => {
   const handleClickWhat = () => {
-    const message = `
-        Olá, vim pelo Cardápio Digital!
-        Gostaria de mais informações...
-    `;
-    const whatsappUrl = `https://wa.me/5511941515753?text=${encodeURIComponent(
-      `${message}`
-    )}`;
-    window.open(whatsappUrl, '_blank');
+    sendMessage({ phone, message });
   };
   return (
     <button
@@ -23,4 +21,4 @@ const SVGIcon = () => {
   );
 };
 
-export default SVGIcon;
+export default ButtonWhats;

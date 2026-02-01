@@ -1,4 +1,3 @@
-import imgPizza from '@/app/_assets/images/pizza/pizza-mussarela.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IProduct } from '../_interfaces/product';
@@ -12,9 +11,9 @@ interface CarouselItemsProps {
 }
 const CarouselItems = ({ items }: CarouselItemsProps) => {
   return (
-    <div className="scrollbar-hidden flex h-100.5 w-full flex-nowrap items-center gap-2 overflow-auto px-2 py-3 sm:w-162.5 lg:w-4/6">
+    <div className="scrollbar-hidden flex h-100.5 w-full flex-nowrap items-center gap-2 overflow-auto px-2 py-3 sm:w-162.5 lg:w-fit">
       {items.map((item, index) => (
-        <Link key={index} href={'/'} className="block">
+        <Link key={index} href={`pages/details/${item.slug}`} className="block">
           <div className="h-87.5 w-50 overflow-hidden rounded-2xl bg-neutral-800">
             <div className="h-53 w-full items-center justify-center overflow-hidden">
               <Image

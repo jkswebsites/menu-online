@@ -10,55 +10,61 @@ export const pizzas: IProduct[] = [
   {
     title: 'Mussarela Grande 8 pedaços',
     ingredients:
-      'Massa de Pizza, Molho de Tomate Caseiro, Azeitona, Oregano, Mussarela',
+      '🍕 Massa de Pizza, ​🍅​ Molho de Tomate Caseiro, ​🟢 Azeitona, ​🧂​ Oregano, 🧀​ Mussarela',
     price: 59.99,
     image: imgPizzaMuss,
     discountPercent: 33,
     type: 'pizza',
+    slug: 'pizza-mussarela',
   },
   {
-    title: 'Mussarela Grande 8 pedaços',
+    title: 'Calabresa Grande 8 pedaços',
     ingredients:
       'Massa de Pizza, Molho de Tomate Caseiro, Azeitona, Oregano, Mussarela',
     price: 49.99,
     image: imgPizzaCala,
     discountPercent: 33,
     type: 'pizza',
+    slug: 'pizza-calabresa',
   },
   {
-    title: 'Mussarela Grande 8 pedaços',
+    title: '4 Queijos Grande 8 pedaços',
     ingredients:
       'Massa de Pizza, Molho de Tomate Caseiro, Azeitona, Oregano, Mussarela',
     price: 50,
     image: imgPizzaChic,
     discountPercent: 50,
     type: 'pizza',
+    slug: 'pizza-4-queijos',
   },
   {
-    title: 'Mussarela Grande 8 pedaços',
+    title: 'Frango com catupry Grande 8 pedaços',
     ingredients:
       'Massa de Pizza, Molho de Tomate Caseiro, Azeitona, Oregano, Mussarela',
     price: 50,
     image: imgPizza4Ches,
     discountPercent: 50,
     type: 'pizza',
+    slug: 'pizza-frango-catupry',
   },
   {
-    title: 'Mussarela Grande 8 pedaços',
+    title: 'Doritos Grande 8 pedaços',
     ingredients:
       'Massa de Pizza, Molho de Tomate Caseiro, Azeitona, Oregano, Mussarela',
     price: 50,
     image: imgPizzaDoritos,
     discountPercent: 50,
     type: 'pizza',
+    slug: 'pizza-doritos',
   },
   {
-    title: 'Mussarela Grande 8 pedaços',
+    title: 'Margaritta Grande 8 pedaços',
     ingredients:
       'Massa de Pizza, Molho de Tomate Caseiro, Azeitona, Oregano, Mussarela',
     price: 50,
     image: imgPizzaFog,
     discountPercent: 50,
     type: 'pizza',
+    slug: 'pizza-margaritta',
   },
 ];
