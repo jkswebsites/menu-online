@@ -11,10 +11,10 @@ const ButtonWhat = ({ phone, message }: ButtonWhatsProps) => {
   return (
     <button
       onClick={handleClickWhat}
-      className="mx-auto mt-5 flex w-4/5 cursor-pointer items-center justify-center gap-2 rounded-lg bg-yellow-400 text-center text-lg font-bold text-neutral-900"
+      className="mx-auto mt-5 flex w-4/5 cursor-pointer items-center justify-center gap-2 rounded-lg bg-yellow-400 text-center font-bold text-neutral-900"
     >
-      <Image src={WhatsLogo} alt="logo whats app" width={40} height={40} />
-      Fazer o Pedido
+      <Image src={WhatsLogo} alt="logo whats app" width={30} height={30} />
+      Fazer o pedido agora!
     </button>
   );
 };

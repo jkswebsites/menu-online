@@ -3,6 +3,9 @@ import { currencyFormatBRL } from '@/app/helpers/calculateDescount';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import ButtonWhat from '@/app/_components/button-whats-bg';
+import TitleContainer from '@/app/_components/title-container';
+import CarouselItems from '@/app/_components/carousel-items';
+import { sodas } from '@/app/_database/sodas';
 
 interface DetailsPageProps {
   params: {
@@ -14,7 +17,11 @@ const DetailsPage = async ({ params }: DetailsPageProps) => {
   const { slug } = await params;
   const item = getItem(slug);
   if (!item) return notFound();
-
+  const orderMessage = `
+  - Olá, Vim pelo Cardápio Digital!
+  - Gostária de uma ${item.type.toUpperCase()} de
+  📝​ ${item.title}
+  `;
   return (
     <div className="mx-auto h-screen w-full pt-10 sm:w-162.5">
       <div className="relative h-100 w-full overflow-hidden">
@@ -22,7 +29,7 @@ const DetailsPage = async ({ params }: DetailsPageProps) => {
         <Image
           src={item.image}
           alt={item.title}
-          className="h-full rounded-b-2xl"
+          className="h-full w-full rounded-b-2xl"
           width={0}
           height={0}
         />
@@ -49,15 +56,23 @@ const DetailsPage = async ({ params }: DetailsPageProps) => {
             </span>
           </p>
         </div>
-        <ButtonWhat
-          phone="5511941515753"
-          message={`Olá, Vim pelo Cardápio Digital!
-          Gostária de uma ${item.type.toUpperCase()} de
-          ${item.title}
-          `}
-        />
+        <ButtonWhat phone="5511941515753" message={orderMessage} />
 
-        <p className="mx-auto my-4 text-lg italic">{item.ingredients}</p>
+        <article className="mt-3">
+          <h3 className="text-lg text-yellow-400">Ingredientes:</h3>
+          <p className="mx-auto my-4 text-lg italic">{item.ingredients}</p>
+        </article>
+      </div>
+
+      <div className="mt-5 px-3">
+        <TitleContainer
+          subtile="Recomendados"
+          distak="Refrigerantes"
+          description="diversas marcas:"
+        />
+        <div className="mt-3">
+          <CarouselItems items={sodas} />
+        </div>
       </div>
     </div>
   );
