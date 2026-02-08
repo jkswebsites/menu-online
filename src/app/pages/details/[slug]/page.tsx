@@ -6,6 +6,7 @@ import ButtonWhat from '@/app/_components/button-whats-bg';
 import TitleContainer from '@/app/_components/title-container';
 import CarouselItems from '@/app/_components/carousel-items';
 import { sodas } from '@/app/_database/sodas';
+import ButtonCartOrder from '@/app/_components/button-cart-order';
 
 interface DetailsPageProps {
   params: {
@@ -57,7 +58,7 @@ const DetailsPage = async ({ params }: DetailsPageProps) => {
           </p>
         </div>
         <ButtonWhat phone="5511941515753" message={orderMessage} />
-
+        <ButtonCartOrder item={item} />
         <article className="mt-3">
           <h3 className="text-lg text-yellow-400">Ingredientes:</h3>
           <p className="mx-auto my-4 text-lg italic">{item.ingredients}</p>

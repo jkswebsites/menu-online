@@ -14,7 +14,7 @@ const ButtonWhats = ({ phone, message }: ButtonWhatsProps) => {
   return (
     <button
       onClick={handleClickWhat}
-      className="fixed right-2 bottom-3 h-12.5 w-12.5 cursor-pointer rounded-full"
+      className="h-12.5 w-12.5 cursor-pointer rounded-full"
     >
       <Image src={WhatsLogo} alt="logo whats app" width={40} height={40} />
     </button>

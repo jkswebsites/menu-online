@@ -9,13 +9,8 @@ import BannerVertical from './_components/banner';
 import { hamburguers } from './_database/hamburguer';
 import img from '@/app/_assets/images/soda/coca-cola-2l.png';
 import Footer from './_components/footer';
-import ButtonWhats from './_components/buttons-whats';
 
 export default function Home() {
-  const messageWhats = `
-        Olá, vim pelo Cardápio Digital!
-        Gostaria de mais informações...
-    `;
   const pizzasDiscount = pizzas
     .slice(0, 5)
     .filter((item) => item.discountPercent > 0);
@@ -60,7 +55,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <ButtonWhats phone="5511941515753" message={messageWhats} />
+
       <Footer />
     </div>
   );
