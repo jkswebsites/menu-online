@@ -7,7 +7,7 @@ interface ButtonCartOrderProps {
   item: IProduct;
 }
 const ButtonCartOrder = ({ item }: ButtonCartOrderProps) => {
-  const { foods, addInCart } = useCartContext();
+  const { addInCart } = useCartContext();
   const handleClick = () => {
     addInCart({ ...item, amount: 1 });
   };

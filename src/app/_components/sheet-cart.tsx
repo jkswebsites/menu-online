@@ -11,10 +11,30 @@ import {
 import { IoFastFoodOutline } from 'react-icons/io5';
 import { useCartContext } from '../context/contextCart';
 import ListItemCart from './list-item-cart';
+import { currencyFormatBRL } from '../helpers/calculateDescount';
 
 const SheetCart = () => {
   const { foods } = useCartContext();
   const quantity = foods.reduce((acc, curr) => (acc += curr.amount), 0);
+  const totalOrder = foods.reduce(
+    (acc, curr) => acc + curr.amount * curr.price,
+    0
+  );
+  const handleClickMakeOrder = () => {
+    const makerOder = foods
+      .map(
+        (food) =>
+          `
+         ✨​ ${food.type.toUpperCase()}
+         ✅​ ${food.title}
+         🍴​ ${food.ingredients}
+         📝​ ${food.amount} X ${food.price} = ${food.amount * food.price}
+        ----------------
+      `
+      )
+      .join('');
+    console.log(makerOder);
+  };
   return (
     <Sheet>
       <SheetTrigger className="cursor-pointer">
@@ -40,7 +60,23 @@ const SheetCart = () => {
             abaixo:
           </SheetDescription>
         </SheetHeader>
+
         <ListItemCart />
+        <div className="mx-auto w-[94%]">
+          <p className="flex items-center justify-between p-3">
+            <span>Total:</span>
+            <span className="font-poppins text-2xl">
+              {currencyFormatBRL(totalOrder)}
+            </span>
+          </p>
+        </div>
+
+        <button
+          onClick={handleClickMakeOrder}
+          className="mx-auto w-4/5 cursor-pointer rounded-sm bg-emerald-500 py-1 font-bold text-neutral-900"
+        >
+          Finalizar Compra
+        </button>
       </SheetContent>
     </Sheet>
   );

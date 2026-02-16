@@ -1,3 +1,4 @@
+'use client';
 import ButtonWhats from './buttons-whats';
 import SheetCart from './sheet-cart';
 

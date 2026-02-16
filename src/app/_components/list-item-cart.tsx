@@ -2,17 +2,19 @@
 import Image from 'next/image';
 import { useCartContext } from '../context/contextCart';
 import { GrRestaurant } from 'react-icons/gr';
+import CountQuantity from './count-quantity';
+import ButtonRemove from './button-remove';
 import { currencyFormatBRL } from '../helpers/calculateDescount';
-import { FaTrashAlt } from 'react-icons/fa';
 
 const ListItemCart = () => {
   const { foods } = useCartContext();
+
   return foods.length > 0 ? (
-    <div className="mx-auto h-85 w-[95%]">
+    <div className="scrollbar-hidden mx-auto h-85 w-[95%] space-y-2 overflow-y-auto rounded-sm bg-neutral-950 p-1">
       {foods.map((food, index) => (
         <div
           key={index}
-          className="flex h-22 w-65 gap-2 rounded-2xl bg-neutral-800 p-2"
+          className="w-[95% mx-auto] flex h-24 gap-2 rounded-2xl bg-neutral-800 p-2"
         >
           <Image
             src={food.image}
@@ -28,10 +30,10 @@ const ListItemCart = () => {
               <span className="font-poppins my-1 h-5 w-4/5">
                 {currencyFormatBRL(food.price)}
               </span>
-              <button className="rounded-sm bg-red-600 p-1">
-                <FaTrashAlt />
-              </button>
+              <ButtonRemove titleName={food.title} />
             </div>
+
+            <CountQuantity cart={food} />
           </div>
         </div>
       ))}
