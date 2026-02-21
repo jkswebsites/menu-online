@@ -17,7 +17,8 @@ const HeroMain = ({ slideImages }: HeroMainProps) => {
       );
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slideImages]);
+
   return (
     <div className="relative h-[80vh] w-full">
       <div className="relative z-0 h-4/5 overflow-hidden lg:h-100">

@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 const CategoryPage = async ({ params }: CategoryPageProps) => {
   const { slug } = await params;

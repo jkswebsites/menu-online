@@ -10,9 +10,9 @@ import { hamburguers } from '@/app/_database/hamburguer';
 import { pizzas } from '@/app/_database/pizzas';
 import img from '@/app/_assets/images/soda/coca-cola-2l.png';
 interface MenuPageProps {
-  params: {
+  params: Promise<{
     slugMain: string;
-  };
+  }>;
 }
 const MenuPage = async ({ params }: MenuPageProps) => {
   const { slugMain } = await params;

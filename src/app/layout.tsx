@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Roboto, Poppins, Oxygen } from 'next/font/google';
 import './globals.css';
-import HeaderMain from './_components/header-main';
 import NavFooter from './_components/nav-footer';
 import { CartContextProvider } from './context/contextCart';
 

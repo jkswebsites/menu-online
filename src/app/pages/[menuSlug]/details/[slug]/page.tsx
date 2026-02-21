@@ -9,9 +9,9 @@ import { sodas } from '@/app/_database/sodas';
 import ButtonCartOrder from '@/app/_components/button-cart-order';
 
 interface DetailsPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const DetailsPage = async ({ params }: DetailsPageProps) => {
