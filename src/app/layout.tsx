@@ -38,7 +38,6 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${poppins.variable} ${oxygen.variable} dark antialiased`}
       >
-        <HeaderMain />
         <CartContextProvider>
           {children}
           <NavFooter />
