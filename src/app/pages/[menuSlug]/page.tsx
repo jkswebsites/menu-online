@@ -16,6 +16,7 @@ interface MenuPageProps {
 }
 const MenuPage = async ({ params }: MenuPageProps) => {
   const { slugMain } = await params;
+  console.log(slugMain);
 
   const pizzasDiscount = pizzas
     .slice(0, 5)
