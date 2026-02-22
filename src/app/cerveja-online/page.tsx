@@ -24,7 +24,7 @@ const CervejaOnlinepage = () => {
                 alt={item.title}
                 width={0}
                 height={0}
-                className="h-22.5 w-16 cursor-pointer brightness-90 drop-shadow-lg hover:scale-200"
+                className={`h-22.5 ${item.customStyle} cursor-pointer brightness-90 drop-shadow-lg hover:scale-200`}
               />
             </div>
 
