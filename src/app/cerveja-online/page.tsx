@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { products } from './items/cervejas';
 import { currencyFormatBRL } from '../helpers/calculateDescount';
+import ButtonWhat from '../_components/button-whats-bg';
 
 const CervejaOnlinepage = () => {
   return (
@@ -36,6 +37,13 @@ const CervejaOnlinepage = () => {
               <p className="font-oxygen text-lg">
                 {currencyFormatBRL(item.price)}
               </p>
+
+              <div className="mt-1">
+                <ButtonWhat
+                  phone="5511941515753"
+                  message={`Gostaria de comprar ${item.title} `}
+                />
+              </div>
             </div>
           </div>
         ))}

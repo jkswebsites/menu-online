@@ -53,6 +53,6 @@ export const products: ICervejaOnline[] = [
     title: 'Original 300ml',
     description: 'Garrafa super gelada',
     price: 3.75,
-    customStyle: 'w-10',
+    customStyle: 'w-11',
   },
 ];
