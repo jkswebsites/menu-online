@@ -1,6 +1,7 @@
 import spaten269Lati from '@/app/_assets/images/beer/spaten-269ml-latinha.png';
 import Orginal269Lati from '@/app/_assets/images/beer/original-269ml.png';
 import amstel269Lati from '@/app/_assets/images/beer/amstel-269ml.png';
+import amstel269Caixinha from '@/app/_assets/images/beer/amstel-269-caixinha.png';
 import Skol269Lati from '@/app/_assets/images/beer/skol-269ml.png';
 import Heineken269Garr from '@/app/_assets/images/beer/heineken-200-garrafa.png';
 import Original300Garr from '@/app/_assets/images/beer/original-300ml-garrafa.png';
@@ -13,6 +14,13 @@ export interface ICervejaOnline {
   customStyle: string;
 }
 export const products: ICervejaOnline[] = [
+  {
+    images: [amstel269Caixinha],
+    title: 'Amstel',
+    description: 'Caixinha 12 latinha 269 mls',
+    price: 38.5,
+    customStyle: '',
+  },
   {
     images: [spaten269Lati],
     title: 'Spaten',

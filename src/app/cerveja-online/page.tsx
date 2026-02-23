@@ -3,7 +3,7 @@ import { products } from './items/cervejas';
 import { currencyFormatBRL } from '../helpers/calculateDescount';
 import ButtonWhat from '../_components/button-whats-bg';
 
-const CervejaOnlinepage = () => {
+const CervejaOnlinePage = () => {
   return (
     <div className="h-screen w-full pt-11 pl-2 lg:px-6">
       <h2 className="font-poppins text-3xl font-bold text-yellow-400">
@@ -52,4 +52,4 @@ const CervejaOnlinepage = () => {
   );
 };
 
-export default CervejaOnlinepage;
+export default CervejaOnlinePage;
