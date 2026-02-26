@@ -3,6 +3,7 @@ import { Roboto, Poppins, Oxygen } from 'next/font/google';
 import './globals.css';
 import NavFooter from './_components/nav-footer';
 import { CartContextProvider } from './context/contextCart';
+import HeaderMain from './_components/header-main';
 
 const roboto = Roboto({
   variable: '--font-roboto',
@@ -38,6 +39,7 @@ export default function RootLayout({
         className={`${roboto.variable} ${poppins.variable} ${oxygen.variable} dark antialiased`}
       >
         <CartContextProvider>
+          <HeaderMain />
           {children}
           <NavFooter />
         </CartContextProvider>

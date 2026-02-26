@@ -11,7 +11,7 @@ const TitleContainer = ({
 }: TitleContainerProps) => {
   return (
     <div>
-      <h3 className="font-poppins text-lg font-bold tracking-wide text-yellow-400 sm:text-3xl">
+      <h3 className="font-poppins text-4xl font-bold tracking-wide text-yellow-400 sm:text-3xl">
         {subtile}
       </h3>
       <p className="font-roboto -mt-2 text-neutral-300">

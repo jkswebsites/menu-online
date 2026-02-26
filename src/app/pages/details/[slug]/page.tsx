@@ -57,8 +57,11 @@ const DetailsPage = async ({ params }: DetailsPageProps) => {
             </span>
           </p>
         </div>
-        <ButtonWhat phone="5511941515753" message={orderMessage} />
-        <ButtonCartOrder item={item} />
+        <div className="mt-2 flex flex-col items-center justify-center">
+          <ButtonWhat phone="5511941515753" message={orderMessage} />
+          <ButtonCartOrder item={item} />
+        </div>
+
         <article className="mt-3">
           <h3 className="text-lg text-yellow-400">Ingredientes:</h3>
           <p className="mx-auto my-4 text-lg italic">{item.ingredients}</p>

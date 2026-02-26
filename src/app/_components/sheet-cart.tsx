@@ -62,21 +62,25 @@ const SheetCart = () => {
         </SheetHeader>
 
         <ListItemCart />
-        <div className="mx-auto w-[94%]">
-          <p className="flex items-center justify-between p-3">
-            <span>Total:</span>
-            <span className="font-poppins text-2xl">
-              {currencyFormatBRL(totalOrder)}
-            </span>
-          </p>
-        </div>
 
-        <button
-          onClick={handleClickMakeOrder}
-          className="mx-auto w-4/5 cursor-pointer rounded-sm bg-emerald-500 py-1 font-bold text-neutral-900"
-        >
-          Finalizar Compra
-        </button>
+        {foods.length > 0 && (
+          <>
+            <div className="mx-auto w-[94%]">
+              <p className="flex items-center justify-between p-3">
+                <span>Total:</span>
+                <span className="font-poppins text-2xl">
+                  {currencyFormatBRL(totalOrder)}
+                </span>
+              </p>
+            </div>
+            <button
+              onClick={handleClickMakeOrder}
+              className="mx-auto w-4/5 cursor-pointer rounded-sm bg-emerald-500 py-1 font-bold text-neutral-900"
+            >
+              Finalizar Compra
+            </button>
+          </>
+        )}
       </SheetContent>
     </Sheet>
   );

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { products } from './items/cervejas';
 import { currencyFormatBRL } from '../helpers/calculateDescount';
+import ButtonWhat from '../_components/button-whats-bg';
 
 const CervejaOnlinepage = () => {
   return (
@@ -24,7 +25,7 @@ const CervejaOnlinepage = () => {
                 alt={item.title}
                 width={0}
                 height={0}
-                className="h-22.5 w-16 cursor-pointer brightness-90 drop-shadow-lg hover:scale-200"
+                className={`h-22.5 ${item.custonStyles} cursor-pointer brightness-90 drop-shadow-lg hover:scale-200`}
               />
             </div>
 
@@ -36,6 +37,17 @@ const CervejaOnlinepage = () => {
               <p className="font-oxygen text-lg">
                 {currencyFormatBRL(item.price)}
               </p>
+
+              <div>
+                <ButtonWhat
+                  phone="5511941515753"
+                  message={`
+                      📝​ Anota ai meu pedido:
+                      🍻​ ${item.title}
+                      ℹ️​ ${item.description}
+                  `}
+                />
+              </div>
             </div>
           </div>
         ))}
