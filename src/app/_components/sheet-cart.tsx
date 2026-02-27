@@ -12,6 +12,7 @@ import { IoFastFoodOutline } from 'react-icons/io5';
 import { useCartContext } from '../context/contextCart';
 import ListItemCart from './list-item-cart';
 import { currencyFormatBRL } from '../helpers/calculateDescount';
+import { sendMessage } from '../helpers/message-what';
 
 const SheetCart = () => {
   const { foods } = useCartContext();
@@ -25,15 +26,19 @@ const SheetCart = () => {
       .map(
         (food) =>
           `
-         ✨​ ${food.type.toUpperCase()}
-         ✅​ ${food.title}
-         🍴​ ${food.ingredients}
-         📝​ ${food.amount} X ${food.price} = ${food.amount * food.price}
+         - ​ ${food.type.toUpperCase()}
+         - ​ ${food.title}
+         - ​ ${food.ingredients}
+         - ​ ${food.amount} X ${food.price} = ${food.amount * food.price}
         ----------------
       `
       )
       .join('');
-    console.log(makerOder);
+    const messageWhats = `
+          Confira o(s) Pedido(s)
+          ${makerOder}
+        `;
+    sendMessage({ phone: '5511941515753', message: messageWhats });
   };
   return (
     <Sheet>
