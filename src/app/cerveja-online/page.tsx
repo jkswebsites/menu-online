@@ -6,12 +6,14 @@ import ButtonWhat from '../_components/button-whats-bg';
 const CervejaOnlinePage = () => {
   return (
     <div className="h-screen w-full pt-11 pl-2 lg:px-6">
-      <h2 className="font-poppins text-3xl font-bold text-yellow-400">
-        Cervejas
-      </h2>
-      <p className="-mt-1.5 text-lg italic">
-        Confira à lista de cervejas disponíveis
-      </p>
+      <div className="mt-6">
+        <h2 className="font-poppins text-3xl font-bold text-yellow-400">
+          Cervejas
+        </h2>
+        <p className="-mt-1.5 text-lg italic">
+          Confira à lista de cervejas disponíveis
+        </p>
+      </div>
 
       <div className="scrollbar-hidden mx-auto mt-10 h-120 w-[90%] space-y-2.5 overflow-y-auto sm:w-110">
         {products.map((item, index) => (
@@ -25,11 +27,7 @@ const CervejaOnlinePage = () => {
                 alt={item.title}
                 width={0}
                 height={0}
-<<<<<<< HEAD
                 className={`h-22.5 ${item.custonStyles} cursor-pointer brightness-90 drop-shadow-lg hover:scale-200`}
-=======
-                className={`h-22.5 ${item.customStyle} cursor-pointer brightness-90 drop-shadow-lg hover:scale-200`}
->>>>>>> 1d8b4fb76d5526ab8ed4d820bde07a9fc0295482
               />
             </div>
 
@@ -42,7 +40,6 @@ const CervejaOnlinePage = () => {
                 {currencyFormatBRL(item.price)}
               </p>
 
-<<<<<<< HEAD
               <div>
                 <ButtonWhat
                   phone="5511941515753"
@@ -51,12 +48,6 @@ const CervejaOnlinePage = () => {
                       🍻​ ${item.title}
                       ℹ️​ ${item.description}
                   `}
-=======
-              <div className="mt-1">
-                <ButtonWhat
-                  phone="5511941515753"
-                  message={`Gostaria de comprar ${item.title} `}
->>>>>>> 1d8b4fb76d5526ab8ed4d820bde07a9fc0295482
                 />
               </div>
             </div>

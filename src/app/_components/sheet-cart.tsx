@@ -77,7 +77,7 @@ const SheetCart = () => {
               onClick={handleClickMakeOrder}
               className="mx-auto w-4/5 cursor-pointer rounded-sm bg-emerald-500 py-1 font-bold text-neutral-900"
             >
-              Finalizar Compra
+              Finalizar Pedido
             </button>
           </>
         )}
