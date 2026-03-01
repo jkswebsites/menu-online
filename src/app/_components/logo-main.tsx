@@ -1,9 +1,14 @@
 import Link from 'next/link';
 import { TbBeach } from 'react-icons/tb';
-
-const LogoMain = () => {
+interface LogoMainProps {
+  pathLink: string;
+}
+const LogoMain = ({ pathLink }: LogoMainProps) => {
   return (
-    <Link href={'/'} className="flex h-14 items-center justify-center gap-1">
+    <Link
+      href={`/${pathLink}`}
+      className="flex h-14 items-center justify-center gap-1"
+    >
       <TbBeach className="text-3xl" />
       <div className="flex flex-col">
         <span className="font-roboto text-lg font-extrabold">Pizzaria</span>

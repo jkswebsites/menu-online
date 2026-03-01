@@ -8,7 +8,7 @@ const HeaderMain = () => {
   return (
     <header className="fixed z-50 flex h-16 w-full flex-row-reverse items-center justify-between bg-linear-to-b from-neutral-900 from-80% to-transparent pl-3 lg:flex-row lg:justify-start">
       <div className="mr-4">
-        <LogoMain />
+        <LogoMain pathLink="don-ramon" />
       </div>
       <div className="lg:hidden">
         <NavbarSheet />

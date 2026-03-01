@@ -1,62 +1,47 @@
-import HeroMain from './_components/hero-main';
-import NavbarOptions from './_components/navbar-options';
-import { slideImages } from './_constants/slide-images';
-import { navImages } from './_constants/nav-images';
+import Link from 'next/link';
 import TitleContainer from './_components/title-container';
-import CarouselItems from './_components/carousel-items';
-import { pizzas } from './_database/pizzas';
-import BannerVertical from './_components/banner';
-import { hamburguers } from './_database/hamburguer';
-import img from '@/app/_assets/images/soda/coca-cola-2l.png';
-import Footer from './_components/footer';
-
+import imgDonRamon from '@/app/_assets/images/pizza/cooking-pizza.png';
+import Image from 'next/image';
 export default function Home() {
-  const pizzasDiscount = pizzas
-    .slice(0, 5)
-    .filter((item) => item.discountPercent > 0);
-  const hambuguersDiscount = hamburguers
-    .slice(0, 5)
-    .filter((item) => item.discountPercent > 0);
   return (
-    <div>
-      <div>
-        <HeroMain slideImages={slideImages} />
+    <div className="h-screen w-full p-6">
+      <TitleContainer
+        subtile="Restaurantes"
+        description="Confira à listas de restaurantes"
+        distak=""
+      />
+
+      <div className="mt-7">
+        <Link href={'/don-ramon'}>
+          <div className="w-4/ h-55 overflow-hidden rounded-2xl border border-neutral-600 bg-neutral-950 sm:w-125">
+            <div className="h-30 w-full overflow-hidden">
+              <Image
+                src={imgDonRamon}
+                alt="pizzaria Don Ramon"
+                width={0}
+                height={0}
+                className="relative bottom-30"
+              />
+            </div>
+            <div className="flex w-full gap-3 px-3">
+              <div className="h-15 w-15 rounded-full bg-red-600"></div>
+
+              <div className="py-2">
+                <h2 className="font-roboto text-lg font-bold text-yellow-300">
+                  Don Ramon
+                </h2>
+                <p className="font-oxygen -mt-2 w-75 truncate text-neutral-300 italic">
+                  Pizzaria especializada em pizzas assadas à lenha
+                </p>
+
+                <button className="font-oxygen my-2 w-4/5 rounded-2xl bg-amber-400 font-bold text-neutral-950">
+                  Confira mais detalhes
+                </button>
+              </div>
+            </div>
+          </div>
+        </Link>
       </div>
-
-      <NavbarOptions options={navImages} />
-
-      <main className="w-full pt-11 pl-2 lg:px-6">
-        <div className="my-4">
-          <TitleContainer
-            subtile="Pizzas"
-            distak="35% Off"
-            description="nas pizza selecionadas abaixo:"
-          />
-          <div className="mt-3">
-            <CarouselItems items={pizzasDiscount} />
-          </div>
-        </div>
-
-        <div>
-          <BannerVertical
-            path="/pages/category/refrigerante"
-            src={img}
-            title="Vai um Refri ai?"
-          />
-        </div>
-        <div className="mt-5">
-          <TitleContainer
-            subtile="Hambúrguers"
-            distak="25% Off"
-            description="nas pizza selecionadas abaixo:"
-          />
-          <div className="mt-3">
-            <CarouselItems items={hambuguersDiscount} />
-          </div>
-        </div>
-      </main>
-
-      <Footer />
     </div>
   );
 }
