@@ -18,16 +18,16 @@ export const products = [
     images: [skol269Caix],
     title: 'Skol',
     description: 'Skol latinha 269 mls',
-    price: 3.25,
+    price: 2.95,
     custonStyles: 'w-16',
   },
-  {
+  /* {
     images: [amstel269Lati],
     title: 'Amstel Lager',
     description: '269 ml, super gelada',
     price: 3.9,
     custonStyles: 'w-16',
-  },
+  },*/
   {
     images: [spaten269Lati],
     title: 'Spaten',
@@ -36,17 +36,10 @@ export const products = [
     custonStyles: 'w-16',
   },
   {
-    images: [Orginal269Lati],
-    title: 'Original',
-    description: '269 ml, super gelada',
-    price: 4.3,
-    custonStyles: 'w-10',
-  },
-  {
     images: [Orginal269litri],
     title: 'Original Litrinho',
     description: 'Original Litrinho 300 ml, super gelada',
-    price: 3.75,
+    price: 3.65,
     custonStyles: 'w-12',
   },
   {
@@ -55,5 +48,12 @@ export const products = [
     description: 'Heineken litrinho 500 ml, super gelada',
     price: 5.5,
     custonStyles: 'w-9',
+  },
+  {
+    images: [Orginal269Lati],
+    title: 'Original',
+    description: '269 ml, super gelada',
+    price: 4.3,
+    custonStyles: 'w-10',
   },
 ];
