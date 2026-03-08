@@ -24,7 +24,7 @@ const DetailsPage = async ({ params }: DetailsPageProps) => {
   📝​ ${item.title}
   `;
   return (
-    <div className="mx-auto h-screen w-full pt-10 sm:w-162.5">
+    <div className="h-screen w-full pt-10">
       <div className="relative h-100 w-full overflow-hidden">
         <div className="absolute h-full w-full bg-linear-to-t from-neutral-900 from-0% to-transparent"></div>
         <Image

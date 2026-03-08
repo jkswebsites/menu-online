@@ -22,15 +22,14 @@ export default function HomePage() {
       <div>
         <HeroMain slideImages={slideImages} />
       </div>
-
       <NavbarOptions options={navImages} />
 
-      <main className="w-full pt-11 pl-2 lg:px-6">
+      <main className="w-full pt-11 pl-2 lg:ml-30 lg:w-200 lg:px-6">
         <div className="my-4">
           <TitleContainer
-            subtile="Pizzas"
-            distak="35% Off"
-            description="nas pizza selecionadas abaixo:"
+            subtile="Pizzas mais vendidas"
+            distak="Top Pizzas"
+            description="sucesso de vendas"
           />
           <div className="mt-3">
             <CarouselItems items={pizzasDiscount} />
@@ -55,7 +54,6 @@ export default function HomePage() {
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );

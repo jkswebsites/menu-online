@@ -8,7 +8,7 @@ export const navImages: ILinkNav[] = [
   {
     name: 'Pizza',
     src: imgPizzaCooking,
-    path: '/pages/category/pizza',
+    path: '/don-ramon/category/pizza',
     description: 'Pizza de mussarela',
   },
   {
@@ -20,7 +20,7 @@ export const navImages: ILinkNav[] = [
   {
     name: 'Humbuger',
     src: imgHumbuger,
-    path: '/pages/category/hamburguer',
+    path: '/don-ramon/category/hamburguer',
     description: 'Humbuger',
   },
   {
