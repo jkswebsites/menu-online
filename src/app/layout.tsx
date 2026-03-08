@@ -22,8 +22,8 @@ const oxygen = Oxygen({
 });
 
 export const metadata: Metadata = {
-  title: 'Don Roman Pizzaria | Home',
-  description: 'Seu cardápio online 24 horas por dia',
+  title: 'Meu Cardápio Digital | Home',
+  description: 'Seu cardápio Digital 24 horas por dia',
 };
 
 export default function RootLayout({

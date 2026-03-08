@@ -4,11 +4,15 @@ import { VscHome } from 'react-icons/vsc';
 import { GiFullPizza } from 'react-icons/gi';
 
 export const linksNav: ILink[] = [
-  { path: '/', label: 'Home', Icon: VscHome },
-  { path: '/pages/category/pizza', label: 'Pizzas', Icon: CiPizza },
-  { path: '/pages/category/hamburguer', label: 'Hamburger', Icon: CiBurger },
+  { path: '/don-ramon', label: 'Home', Icon: VscHome },
+  { path: '/don-ramon/category/pizza', label: 'Pizzas', Icon: CiPizza },
   {
-    path: '/pages/category/refrigerante',
+    path: '/don-ramon/category/hamburguer',
+    label: 'Hamburger',
+    Icon: CiBurger,
+  },
+  {
+    path: '/don-ramon/category/refrigerante',
     label: 'Pizza Doce',
     Icon: GiFullPizza,
   },

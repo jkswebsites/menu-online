@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import TitleContainer from './_components/title-container';
 import imgDonRamon from '@/app/_assets/images/pizza/cooking-pizza.png';
+import imgLogoDonRamon from '@/app/_assets/images/pizza/cooking-pizza.png';
 import Image from 'next/image';
+
 export default function Home() {
   return (
     <div className="h-screen w-full p-6">
@@ -24,7 +26,15 @@ export default function Home() {
               />
             </div>
             <div className="flex w-full gap-3 px-3">
-              <div className="h-15 w-15 rounded-full bg-red-600"></div>
+              <div className="h-15 w-15 overflow-hidden rounded-full bg-red-600">
+                <Image
+                  src={imgLogoDonRamon}
+                  alt="logo pizzaria Don Ramon"
+                  width={0}
+                  height={0}
+                  className="h-full w-full"
+                />
+              </div>
 
               <div className="py-2">
                 <h2 className="font-roboto text-lg font-bold text-yellow-300">

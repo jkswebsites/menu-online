@@ -10,7 +10,7 @@ import { hamburguers } from '../_database/hamburguer';
 import { pizzas } from '../_database/pizzas';
 import img from '@/app/_assets/images/soda/coca-cola-2l.png';
 
-export default function Home() {
+export default function HomePage() {
   const pizzasDiscount = pizzas
     .slice(0, 5)
     .filter((item) => item.discountPercent > 0);
